@@ -9,7 +9,7 @@ services:
       - "ENABLE_DELETE_IMAGES=true"
       - "PUBLIC_REGISTRY_URL=localhost:5000"
     ports:
-      - "8080:8080"
+      - "3000:8080"
 
   backend:
     image: registry:2
