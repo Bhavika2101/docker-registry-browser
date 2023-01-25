@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: registry-browser-lb
+  name: registry-browser-backend
   labels:
-    app: registry-browser
+    app: registry-browser-backend
 spec:
   selector:
-    app: registry-browser
+    app: registry-browser-backend
   ports:
     - port: 3001
       targetPort: 5000
