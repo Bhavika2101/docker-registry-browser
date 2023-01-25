@@ -12,3 +12,20 @@ spec:
       targetPort: 8080
       nodePort: 30050
   type: NodePort
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: registry-browser-backend
+  labels:
+    app: registry-browser-backend
+spec:
+  selector:
+    app: registry-browser-backend
+  ports:
+    - port: 3001
+      targetPort: 5000
+      nodePort: 30060
+  type: NodePort
