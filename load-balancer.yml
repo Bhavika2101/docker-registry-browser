@@ -8,7 +8,12 @@ spec:
   selector:
     app: registry-browser
   ports:
-    - port: 3000
+    - name: Frontend
+      port: 3000
       targetPort: 8080
       nodePort: 30050
+    - name: Backend
+      port: 3001
+      targetPort: 5000
+      nodePort: 30060
   type: NodePort
