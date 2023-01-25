@@ -16,8 +16,6 @@ spec:
     spec:
       containers:
       - name: registry-browser-frontend
-        build:
-          context: .
         env:
         - name: DOCKER_REGISTRY_URL
           value: "http://registry-browser-backend:5000"
