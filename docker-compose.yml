@@ -7,7 +7,7 @@ services:
     environment:
       - "DOCKER_REGISTRY_URL=http://backend:5000"
       - "ENABLE_DELETE_IMAGES=true"
-      - "PUBLIC_REGISTRY_URL=localhost:5000"
+      - "PUBLIC_REGISTRY_URL=$ROOST_CLUSTER_IP:5000"
     ports:
       - "3000:8080"
 
