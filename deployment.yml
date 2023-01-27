@@ -19,7 +19,7 @@ spec:
         image: local-registry:5002/registry-browser:latest
         env:
         - name: DOCKER_REGISTRY_URL
-          value: "http://backend:5000"
+          value: "$ROOST_CLUSTER_IP:5001"
         - name: ENABLE_DELETE_IMAGES
           value: "true"
         - name: PUBLIC_REGISTRY_URL
