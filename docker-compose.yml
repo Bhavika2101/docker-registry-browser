@@ -5,9 +5,8 @@ services:
   frontend:
     build: .
     environment:
-      - "DOCKER_REGISTRY_URL=$ROOST_CLUSTER_IP:5001"
+      - "DOCKER_REGISTRY_URL=$ROOST_CLUSTER_IP:5000"
       - "ENABLE_DELETE_IMAGES=true"
-      - "PUBLIC_REGISTRY_URL=$ROOST_CLUSTER_IP:5000"
     ports:
       - "3000:8080"
 
