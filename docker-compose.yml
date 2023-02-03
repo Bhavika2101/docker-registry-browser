@@ -5,15 +5,16 @@ services:
   frontend:
     build: .
     environment:
-      - "DOCKER_REGISTRY_URL=http://backend:5000"
+      - "DOCKER_REGISTRY_URL=http://${ROOST_CLUSTER_IP}:5002"
       - "ENABLE_DELETE_IMAGES=true"
-      - "PUBLIC_REGISTRY_URL=localhost:5000"
+      - "SCRIPT_NAME=/browser"
+      - "RAILS_RELATIVE_URL_ROOT=/browser"
     ports:
-      - "8080:8080"
+      - "30001:8080"
 
   backend:
     image: registry:2
     environment:
       - "REGISTRY_STORAGE_DELETE_ENABLED=true"
     ports:
-      - "5000:5000"
+      - "30015:5002"
